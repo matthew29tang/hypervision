@@ -35,9 +35,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Toolbar />
         <Router />
-        <main style={{marginTop: '64px'}}>
+        <main style={{marginTop: '150px'}}>
         <p>This is the page content!</p>
       </main>
       </div>

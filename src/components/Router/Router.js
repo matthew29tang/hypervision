@@ -1,29 +1,35 @@
 import React from "react";
 import './Router.css';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { NavLink } from 'react-router-dom';
 
 function Approuter() {
   return (
     <Router>
-      <div className="router">
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/topics">Topics</Link>
-          </li>
-        </ul>
+      <header className="toolbar">
+        <nav className="toolbar__navigation">
+          <div className="spacer" />
+            <div>
+            <ul className="toolbar_navigation-items">
+              <li>
+                <NavLink to="/">Home</NavLink>
+              </li>
+              <li>
+                <NavLink to="/about">About</NavLink>
+              </li>
+              <li>
+                <NavLink to="/topics">Topics</NavLink>
+              </li>
+            </ul>
 
-        <hr />
+            <hr />
 
-        <Route exact path="/" component={Home} />
-        <Route path="/about" component={About} />
-        <Route path="/topics" component={Topics} />
-      </div>
+            <Route exact path="/" component={Home} />
+            <Route path="/about" component={About} />
+            <Route path="/topics" component={Topics} />
+          </div>
+        </nav>
+      </header>
     </Router>
   );
 }
@@ -50,13 +56,13 @@ function Topics({ match }) {
       <h2>Topics</h2>
       <ul>
         <li>
-          <Link to={`${match.url}/rendering`}>Rendering with React</Link>
+          <NavLink to={`${match.url}/rendering`}>Rendering with React</NavLink>
         </li>
         <li>
-          <Link to={`${match.url}/components`}>Components</Link>
+          <NavLink to={`${match.url}/components`}>Components</NavLink>
         </li>
         <li>
-          <Link to={`${match.url}/props-v-state`}>Props v. State</Link>
+          <NavLink to={`${match.url}/props-v-state`}>Props v. State</NavLink>
         </li>
       </ul>
 
