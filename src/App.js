@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 //import './App.css';
-import Toolbar from './components/Toolbar/Toolbar';
 import Router from './components/Router/Router';
 import Approuter from './components/Router/Router';
 import Upload from './components/Upload/Upload';
+import NavBar from './components/Router/NavBar';
 
 /*function App() {
   return (
@@ -35,13 +35,15 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Router />
-        <main style={{marginTop: '150px'}}>
-        <p>This is the page content!</p>
-      </main>
+        <NavBar />
       </div>
     )
   }
 }
+
+/*
+<main style={{marginTop: '150px'}}>
+</main>
+*/
 
 export default App;
