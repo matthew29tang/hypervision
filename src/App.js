@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 //import './App.css';
 import Toolbar from './components/Toolbar/Toolbar';
+import Router from './components/Router/Router';
+import Approuter from './components/Router/Router';
+import Upload from './components/Upload/Upload';
 
 /*function App() {
   return (
@@ -33,6 +36,7 @@ class App extends Component {
     return (
       <div className="App">
         <Toolbar />
+        <Router />
         <main style={{marginTop: '64px'}}>
         <p>This is the page content!</p>
       </main>
