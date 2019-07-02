@@ -11,6 +11,10 @@ import { withStyles } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 
+import Home from "../Pages/Home.js";
+import About from "../Pages/About.js";
+import Upload from "../Pages/Upload.js";
+
 const styles = theme => ({
   root: {
     padding: theme.spacing(3, 2),
@@ -23,7 +27,7 @@ const routing = (
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />
-        <Route path="/topics" component={Topics} />
+        <Route path="/upload" component={Upload} />
       </Switch>
     </div>
   </Router>
@@ -50,55 +54,6 @@ class Routing extends React.Component {
   }
 }
 
-function Home() {
-  return (
-    <div>
-      <h2>Home</h2>
-    </div>
-  );
-}
-
-function About() {
-  return (
-    <div>
-      <h2>About</h2>
-    </div>
-  );
-}
-
-function Topics({ match }) {
-  return (
-    <div>
-      <h2>Topics</h2>
-      <ul>
-        <li>
-          <NavLink to={`${match.url}/rendering`}>Rendering with React</NavLink>
-        </li>
-        <li>
-          <NavLink to={`${match.url}/components`}>Components</NavLink>
-        </li>
-        <li>
-          <NavLink to={`${match.url}/props-v-state`}>Props v. State</NavLink>
-        </li>
-      </ul>
-
-      <Route path={`${match.path}/:topicId`} component={Topic} />
-      <Route
-        exact
-        path={match.path}
-        render={() => <h3>Please select a topic.</h3>}
-      />
-    </div>
-  );
-}
-
-function Topic({ match }) {
-  return (
-    <div>
-      <h3>{match.params.topicId}</h3>
-    </div>
-  );
-}
 
 export default withStyles(styles)(Routing);
 /*import React from "react";

@@ -14,15 +14,21 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 
 import Routing from './Router.js';
-import styles from './navBarStyles.js'
+import styles from './navBarStyles.js';
+import './NavBar.css';
 
 class NavBar extends React.Component {
     render() {
         /*const { classes } = this.props;*/
+        const s = { 
+            color: 'white',
+            textDecoration: 'none'
+        };
 
         return (
             <div>
               <CssBaseline />
+                <AppBar>
                 <Toolbar>
                   <Typography
                     component="h1"
@@ -31,22 +37,23 @@ class NavBar extends React.Component {
                     noWrap
                   >
                     <Router>
-                      <NavLink activeClassName="active" to={"/"} type="menu">
-                        HyperLink Service
-                    </NavLink>
+                      <NavLink activeClassName="active" to={"/"} type="menu" className="Title">
+                        Hyperlink Service
+                        </NavLink>
                     </Router>
                   </Typography>
                   <Router>
-                    <NavLink to="/about">
+                    <NavLink to="/about" className="links">
                       <Button color="inherit">About</Button>
                     </NavLink>
                   </Router>
                   <Router>
-                    <NavLink to="/topics">
-                      <Button color="inherit">Topics</Button>
+                    <NavLink to="/upload" className="links">
+                      <Button color="inherit">Upload</Button>
                     </NavLink>
                   </Router>
                 </Toolbar>
+              </AppBar>
               <main /*className={classes.content}*/>
                 <div /*className={classes.appBarSpacer}*/ />
                 <Routing />

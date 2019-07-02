@@ -1,4 +1,4 @@
-const drawerWidth = 240;
+/*const drawerWidth = 240;
 const styles = theme => ({
   root: {
     display: 'flex',
@@ -80,3 +80,4 @@ const styles = theme => ({
 });
 
 export default styles;
+*/
