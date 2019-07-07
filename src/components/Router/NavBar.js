@@ -3,8 +3,6 @@ import {
     HashRouter as Router,
     NavLink
 } from "react-router-dom";
-/*import PropTypes from 'prop-types';
-import classNames from 'classnames';*/
 
 import { withStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -14,12 +12,10 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 
 import Routing from './Router.js';
-import styles from './navBarStyles.js';
 import './NavBar.css';
 
 class NavBar extends React.Component {
     render() {
-        /*const { classes } = this.props;*/
         const s = { 
             color: 'white',
             textDecoration: 'none'
@@ -54,8 +50,8 @@ class NavBar extends React.Component {
                   </Router>
                 </Toolbar>
               </AppBar>
-              <main /*className={classes.content}*/>
-                <div /*className={classes.appBarSpacer}*/ />
+              <main>
+                <div />
                 <Routing />
               </main>
             </div>
@@ -63,4 +59,4 @@ class NavBar extends React.Component {
     }
 }
 
-export default withStyles(styles)(NavBar);
+export default NavBar;
