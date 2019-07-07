@@ -33,18 +33,20 @@ class NavBar extends React.Component {
                     noWrap
                   >
                     <Router>
-                      <NavLink activeClassName="active" to={"/"} type="menu" className="Title">
-                        Hyperlink Service
+                      <div>
+                        <NavLink activeClassName="active" to={"/"} type="menu" id="Title">
+                          Hyperlink Service
                         </NavLink>
+                      </div>
                     </Router>
                   </Typography>
                   <Router>
-                    <NavLink to="/about" className="links">
+                    <NavLink to="/about" className="links" id="about">
                       <Button color="inherit">About</Button>
                     </NavLink>
                   </Router>
                   <Router>
-                    <NavLink to="/upload" className="links">
+                    <NavLink to="/upload" className="links" id="upload">
                       <Button color="inherit">Upload</Button>
                     </NavLink>
                   </Router>
