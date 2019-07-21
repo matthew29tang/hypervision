@@ -50,6 +50,11 @@ class NavBar extends React.Component {
                       <Button color="inherit">Upload</Button>
                     </NavLink>
                   </Router>
+                  <Router>
+                    <NavLink to="/results" className="links" id="results">
+                      <Button color="inherit">Results</Button>
+                    </NavLink>
+                  </Router>
                 </Toolbar>
               </AppBar>
               <main>

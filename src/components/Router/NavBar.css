@@ -13,10 +13,15 @@
 
 #about {
     position: absolute;
-    padding-right: 100px;
+    padding-right: 190px;
 }
 
 #upload{
+    position: absolute;
+    padding-right: 100px;
+}
+
+#results{
     position: absolute;
     padding-right: 10px;
 }

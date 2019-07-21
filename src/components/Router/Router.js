@@ -14,6 +14,7 @@ import Grid from '@material-ui/core/Grid';
 import Home from "../Pages/Home.js";
 import About from "../Pages/About.js";
 import Upload from "../Pages/Upload.js";
+import Results from "../Pages/Results.js";
 
 const styles = theme => ({
   root: {
@@ -26,8 +27,9 @@ const routing = (
     <div className="Router">
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/about" component={About} />
         <Route path="/upload" component={Upload} />
+        <Route path="/results" component={Results} />
+        <Route path="/about" component={About} />
       </Switch>
     </div>
   </Router>
