@@ -12,6 +12,7 @@ import Grid from '@material-ui/core/Grid';
 
 import About from "../About.js";
 import Vision from "../Vision.js";
+import Logo from "../Logo.js";
 
 const styles = theme => ({
   root: {
@@ -28,6 +29,7 @@ const routing = (
       <Switch>
         <Route exact path="/" component={Vision} />
         <Route path="/about" component={About} />
+        <Route path="/logo" component={Logo} />
       </Switch>
     </div>
   </Router>

@@ -1,4 +1,5 @@
 import React from 'react';
+import imageCompression from 'browser-image-compression';
 import Divider from '@material-ui/core/Divider';
 import Dropzone from './Dropzone/Dropzone.js';
 import Progress from './Progress/Progress.js';
@@ -17,6 +18,8 @@ class Upload extends React.Component {
       uploadProgress: {},
       successfullUploaded: false
     };
+    // Ping the backend so we can get it spinning
+    fetch(BACKEND_URL);
   }
 
   onFilesAdded = (file) => {
@@ -48,10 +51,17 @@ class Upload extends React.Component {
   uploadFiles = (file) => {
     this.setState({ uploadProgress: {}, uploading: true });
     try {
-      this.sendRequest(file);
+      var options = {
+        maxSizeMB: 1,
+        maxWidthOrHeight: 1920,
+      }
+      imageCompression(file, options)
+        .then(compressed => {
+          this.sendRequest(compressed)
+        })
       this.setState({ successfullUploaded: true, uploading: false });
     } catch (e) {
-      this.setState({ successfullUploaded: true, uploading: false });
+      this.setState({ successfullUploaded: false, uploading: false });
     }
   }
 
@@ -83,7 +93,6 @@ class Upload extends React.Component {
 
     const formData = new FormData();
     formData.append("image", file, "image");
-    console.log("Uploading...");
     req.open("POST", BACKEND_URL);
     req.send(formData);
     req.onreadystatechange = () => {
@@ -114,7 +123,7 @@ class Upload extends React.Component {
           <div id="Files">
             Uploading image... 
             <br/>
-            (this can take up to 5-10 secs for large images)
+            (this can take up to 5 secs for large images)
             {/*
             <div key={this.state.files.name} id="Row">
               {this.renderProgress(this.state.files)}
