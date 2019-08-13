@@ -82,10 +82,10 @@ class Dropzone extends Component {
           ref={this.fileInputRef}
           id="FileInput"
           type="file"
-          multiple
+          accept="image/*"
           onChange={this.onFilesAdded}
         />
-        <span>Upload Files</span>
+        <span>Upload Picture</span>
       </div>
     );
   }

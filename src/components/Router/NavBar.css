@@ -1,7 +1,7 @@
 #Title {
     color: white;
     text-decoration: none;
-    padding-left: 600px;
+    text-align: center;
 }
 
 .links {
@@ -11,17 +11,7 @@
     right: 0px;
 }
 
-#about {
-    position: absolute;
-    padding-right: 190px;
-}
-
-#upload{
-    position: absolute;
-    padding-right: 100px;
-}
-
-#results{
+#about{
     position: absolute;
     padding-right: 10px;
 }
