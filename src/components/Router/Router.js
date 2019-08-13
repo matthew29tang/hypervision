@@ -10,8 +10,8 @@ import { withStyles } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 
-import About from "../Pages/About.js";
-import Vision from "../Pages/Vision.js";
+import About from "../About.js";
+import Vision from "../Vision.js";
 
 const styles = theme => ({
   root: {

@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
-import Dropzone from './Dropzone/Dropzone';
-import Progress from './Progress/Progress';
-import progress from './Progress/progress.svg';
+import React from 'react';
 import Divider from '@material-ui/core/Divider';
+import Dropzone from './Dropzone/Dropzone.js';
+import Progress from './Progress/Progress.js';
+import progress from './Progress/progress.svg';
 import './Pages.css';
 
 const BACKEND_URL = "https://ocr-hyperlink-vision.herokuapp.com/upload"
 
-class Upload extends Component {
+class Upload extends React.Component {
 
   constructor(props) {
     super(props);

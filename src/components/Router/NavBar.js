@@ -1,8 +1,5 @@
 import React from 'react';
-import {
-  HashRouter as Router,
-  NavLink
-} from "react-router-dom";
+import { HashRouter as Router, NavLink } from "react-router-dom";
 
 import { withStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';

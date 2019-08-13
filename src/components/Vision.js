@@ -1,6 +1,6 @@
 import React from 'react';
-import Upload from "../Pages/Upload.js";
-import Results from "../Pages/Results.js";
+import Upload from "./Upload.js";
+import Results from "./Results.js";
 
 class Vision extends React.Component {
 

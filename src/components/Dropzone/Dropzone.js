@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import logo from './dropzone.svg';
 import './Dropzone.css';
 
-class Dropzone extends Component {
+class Dropzone extends React.Component {
   constructor(props) {
     super(props)
     this.state = { hightlight: false };

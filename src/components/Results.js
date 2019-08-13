@@ -5,16 +5,17 @@ import Divider from '@material-ui/core/Divider';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Button from '@material-ui/core/Button';
+
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import './Pages.css';
 
 const styles = theme => ({
   card: {
-    minWidth: 275,
     marginBottom: 20,
     padding: 9,
     paddingTop: 0,
     paddingBottom: 20,
+    flexWrap: "wrap"
   },
   title: {
     fontSize: 14,
@@ -49,9 +50,9 @@ class Results extends React.Component {
           return (
             <center key={i}>
               <Box width="75%">
-                <Card className={classes.card}>
+                <Card className={classes.card} style={{'whiteSpace': 'unset', 'wordWrap': 'break-word'}}>
                   <Typography className={classes.title}>
-                    <h2>{link.value}</h2>
+                    <h3>{link.value}</h3>
                   </Typography>
                   <a href={link.href}>
                     <Button variant="contained" color="primary" className={classes.button}>
