@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "08cee73f7e120736f7ffe6cb4c4f4ea7",
+    "revision": "4dc84f4fb1e18dd9edb6cae87f8c6c58",
     "url": "/hypervision/index.html"
   },
   {
-    "revision": "60068ad3d6707a7021b6",
+    "revision": "264b922ee954d4c933bf",
     "url": "/hypervision/static/css/main.57d3ad94.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/hypervision/static/js/2.57951583.chunk.js"
   },
   {
-    "revision": "60068ad3d6707a7021b6",
-    "url": "/hypervision/static/js/main.08ea4092.chunk.js"
+    "revision": "264b922ee954d4c933bf",
+    "url": "/hypervision/static/js/main.18673d80.chunk.js"
   },
   {
     "revision": "3efd3c0b3f7c46c3b4bd",
