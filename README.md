@@ -2,6 +2,7 @@
 
 [![Version](https://img.shields.io/badge/Version-1.1.0-1f425f.svg)](https://shields.io/)
 [![Website](https://img.shields.io/website-up-down-green-red/https/matthew29tang.github.io/hypervision)](https://matthew29tang.github.io/hypervision)
+[![Known Vulnerabilities](https://snyk.io/test/github/matthew29tang/hypervision/badge.svg?targetFile=package.json)](https://snyk.io/test/github/matthew29tang/hypervision?targetFile=package.json)
 [![JavaScript Style Guide: Good Parts](https://img.shields.io/badge/code%20style-goodparts-brightgreen.svg?style=flat)](https://github.com/dwyl/goodparts "JavaScript The Good Parts")
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
