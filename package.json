@@ -11,7 +11,7 @@
     "react-copy-to-clipboard": "^5.0.1",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.1",
-    "react-scripts": "3.0.1",
+    "react-scripts": "^3.3.0",
     "reactjs-file-uploader": "^1.0.8"
   },
   "scripts": {
@@ -20,7 +20,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "lint": "node_modules/.bin/goodparts path/to/files/for/linting"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -36,5 +37,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "goodparts": "^1.2.1"
   }
+  
 }
