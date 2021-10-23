@@ -12,7 +12,8 @@
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.1",
     "react-scripts": "^3.3.0",
-    "reactjs-file-uploader": "^1.0.8"
+    "reactjs-file-uploader": "^1.0.8",
+    "@snyk/protect": "latest"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -21,7 +22,9 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "lint": "node_modules/.bin/goodparts path/to/files/for/linting"
+    "lint": "node_modules/.bin/goodparts path/to/files/for/linting",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -40,6 +43,6 @@
   },
   "devDependencies": {
     "goodparts": "^1.2.1"
-  }
-  
+  },
+  "snyk": true
 }
